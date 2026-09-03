@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: tu360
+      POSTGRES_PASSWORD: tu360
+      POSTGRES_DB: tu360_monitor
+    ports:
+      - "5432:5432"
+    volumes:
+      - tu360_pgdata:/var/lib/postgresql/data
+
+volumes:
+  tu360_pgdata:
